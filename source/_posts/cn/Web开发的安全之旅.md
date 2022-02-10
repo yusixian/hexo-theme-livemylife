@@ -1,7 +1,7 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「Web开发的安全之旅」
 catalog: true
-date: 2022-01-20 14:30:17
+date: 2022-01-25 14:30:17
 subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
