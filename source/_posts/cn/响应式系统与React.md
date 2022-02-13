@@ -2,13 +2,17 @@
 title: 【第二届青训营-寒假前端场】- 「响应式系统与 React」
 catalog: true
 date: 2022-01-21 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 本节课大致介绍了响应式编程、React及其原理，介绍了组件化、一些应用级框架
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- 响应式
+- React
+- Hook
 categories:
 - 前端
+  - 学习笔记
 ---
 ## React的历史与应用
 

@@ -2,13 +2,17 @@
 title: 【第二届青训营-寒假前端场】- 「Web开发的安全之旅」
 catalog: true
 date: 2022-01-25 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: Web安全相关知识，包括Web攻击的种类、防御方式等
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- Web安全
+- XSS
+- 
 categories:
 - 前端
+  - 学习笔记
 ---
 #  本节课重点内容
 

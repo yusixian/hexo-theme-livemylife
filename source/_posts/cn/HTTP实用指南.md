@@ -2,13 +2,16 @@
 title: 【第二届青训营-寒假前端场】- 「HTTP实用指南」
 catalog: true
 date: 2022-01-22 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: HTTP及其常见协议分析、报文结构、缓存策略分析，以及其具体的业务场景使用。 
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- HTTP
+- 网络协议
 categories:
 - 前端
+  - 学习笔记
 ---
 ## 初识HTTP
 

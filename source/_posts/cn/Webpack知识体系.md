@@ -2,13 +2,16 @@
 title: 【第二届青训营-寒假前端场】- 「构建Webpack知识体系」
 catalog: true
 date: 2022-01-27 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 这节课详细讲了Webpack的Webpack的作用、配置结构及其关键配置项，还讲了Loader中的链式调用、插件的实现原理与一些其他特性等，可以看出老师对Webpack的研究非常详细透彻，课上都是直接进行调试进入loader内部等帮助我们理解。
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- JavaScript
+- Webpack
 categories:
 - 前端
+  - 学习笔记
 ---
 # 本节课重点内容
 

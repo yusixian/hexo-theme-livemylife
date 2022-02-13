@@ -2,13 +2,16 @@
 title: 【第二届青训营-寒假前端场】- 「CSS布局」
 catalog: true
 date: 2022-01-16 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 字节青训营笔记，也算是自己进行的布局学习的梳理吧，MDN上讲的很详细,所以大多附上了MDN上的链接。
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- CSS
+- layout
 categories:
 - 前端
+  - 学习笔记
 ---
 # 布局（layout）
 - 确定内容的大小和位置的算法

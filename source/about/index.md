@@ -95,7 +95,6 @@ prompt.promptError(errorMsg);
 - 组件事件包括提示Prompt事件（promptSuccess、promptError）、选择框Picker事件（refreshItems、selectItem）等
 - 全局事件包括课程筛选事件（displayCourseListAll、refreshCourseList、fliter）、报名提交事件（refreshRegisterArea、submitInfo）
 
-=======
 - step1：完成静态页面的布局及样式开发
 - step2：实现报名区域、课程安排的筛选功能
 - step3：实现点击弹出年份选择面板，并增加弹出框和课程的渐进动画

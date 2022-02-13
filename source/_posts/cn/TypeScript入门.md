@@ -2,13 +2,16 @@
 title: 【第二届青训营-寒假前端场】- 「TypeScript入门」笔记
 catalog: true
 date: 2022-01-28 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 这节课老师讲了TypeScript的用处与基本语法、高级类型的应用、类型保护与类型守卫
+sticky: 998
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- TypeScript
 categories:
 - 前端
+  - 学习笔记
 ---
 
 # 什么是TypeScript

@@ -2,13 +2,17 @@
 title: 【第二届青训营-寒假前端场】- 「跟着月影学 JavaScript」笔记
 catalog: true
 date: 2022-01-17 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 面向对象的设计、高阶函数（节流、防抖、批处理、可迭代化）
+sticky: 999
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- JavaScript
+- 纯函数
 categories:
 - 前端
+  - 学习笔记
 ---
 # 本堂课重点内容
 

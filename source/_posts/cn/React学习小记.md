@@ -2,13 +2,15 @@
 title: React学习小记
 catalog: true
 date: 2022-02-05 14:30:00
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 一点点React学习的记录（真的只有一点点- -）
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- React
 categories:
 - 前端
+  - 学习笔记
 ---
 #   事件处理
 

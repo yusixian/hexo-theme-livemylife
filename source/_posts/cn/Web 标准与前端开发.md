@@ -2,13 +2,17 @@
 title: 【第二届青训营-寒假前端场】- 「Web 标准与前端开发」
 catalog: true
 date: 2022-01-19 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 本节课主要讲了前端开发的历程、应用领域，推荐了前端的学习路线图，以及一些Web标准
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- JavaScript
+- Web标准
+- W3C
 categories:
 - 前端
+  - 学习笔记
 ---
 ## 关于前端开发
 

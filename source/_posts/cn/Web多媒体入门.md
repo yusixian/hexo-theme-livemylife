@@ -2,13 +2,16 @@
 title: 【第二届青训营-寒假前端场】- 「Web多媒体入门」笔记
 catalog: true
 date: 2022-01-30 14:30:17
-subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装
+subtitle: 本节课老师科普了Web多媒体技术的基本概念，如编码格式、封装格式、多媒体元素、流媒体协议等，并阐述了Web多媒体的多种应用场景
 lang: cn
 header-img: /img/header_img/lml_bg.jpg
 tags:
 - 前端
+- 图像编码
+- Web多媒体
 categories:
 - 前端
+  - 学习笔记
 ---
 
 # Web多媒体历史

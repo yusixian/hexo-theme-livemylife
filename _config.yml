@@ -13,10 +13,10 @@ language: # At present, only en、cn and tw are supported. You can customize the
   - cn
   # - en
 langselect:
-  enable: false # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
+  enable: true # If open, it will automatically generation lang-select button.This button can jump in articles in different languages, but the articles must have the same name.
   options: # langselect button display options
     cn: 简体中文
-    en: English
+    # en: English
     # tw: 正體中文
 
 
@@ -73,7 +73,7 @@ zhihu_username: qi-jiu-en
 
 # Sidebar Settings
 sidebar: true   # whether or not using Sidebar.
-sidebar-about-description: "Fat people have no future, either thin or die..."
+sidebar-about-description: "诶嘿~~"
 sidebar-avatar: img/avatar/fatpeople.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 # - visitor   # busuanzi: https://busuanzi.ibruce.info/
@@ -381,5 +381,5 @@ gitter:
 ##
 deploy:
   type: git
-  repo: ysx:yusixian/yusixian.github.io.git # or https://gitee.com/<yourAccount>/<repo>
+  repo: https://github.com/yusixian/yusixian.github.io.git # or https://gitee.com/<yourAccount>/<repo>
   branch: master
