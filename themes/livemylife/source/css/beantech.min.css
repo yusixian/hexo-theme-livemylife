@@ -749,8 +749,8 @@ img::-moz-selection {
   color: #fff;
   line-height: 24px;
   font-size: 12px;
-  text-decoration: none;
-  text-shadow: 1px 1px 6px black;
+  text-decoration: none;    
+  box-shadow: 1px 1px 1px grey;
   margin: 0 1px;
   margin-bottom: 6px;
 }
