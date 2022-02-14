@@ -2,5 +2,5 @@
 layout: "categories"
 title: "Categories"
 description: "Hi , here is Categories ...."
-header-img: "img/header_img/categories_bg.jpg"
+header-img: "img/header_img/87749466_p0.jpg"
 ---

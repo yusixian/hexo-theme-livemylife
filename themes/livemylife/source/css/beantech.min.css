@@ -433,6 +433,7 @@ pre code {
 .intro-header .page-heading h1 {
   margin-top: 0;
   font-size: 50px;
+  text-shadow: 1px 1px 6px gray;
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
@@ -446,6 +447,7 @@ pre code {
   line-height: 1.1;
   display: block;
   font-weight: 300;
+  text-shadow: 1px 1px 6px black;
   margin: 10px 0 0;
 }
 @media only screen and (min-width: 840px) {
@@ -481,6 +483,7 @@ pre code {
   font-style: italic;
   font-weight: 300;
   font-size: 18px;
+  text-shadow: 1px 1px 4px gray;
 }
 .blank_box {
   width: 100%;
@@ -747,6 +750,7 @@ img::-moz-selection {
   line-height: 24px;
   font-size: 12px;
   text-decoration: none;
+  text-shadow: 1px 1px 6px black;
   margin: 0 1px;
   margin-bottom: 6px;
 }

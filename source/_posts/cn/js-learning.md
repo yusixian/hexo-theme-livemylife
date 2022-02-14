@@ -5,7 +5,7 @@ date: 2022-01-17 14:30:17
 subtitle: 面向对象的设计、高阶函数（节流、防抖、批处理、可迭代化）
 sticky: 999
 lang: cn
-header-img: /img/header_img/lml_bg.jpg
+header-img: /img/header_img/87256886_p0.jpg
 tags:
 - 前端
 - JavaScript

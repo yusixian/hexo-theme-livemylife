@@ -5,7 +5,7 @@ catalog: true
 lang: cn
 date:  2020-07-05 00:18:16
 subtitle: 本博客是为了记录学习数据结构时做的题集，若代码有疏漏欢迎指出！ps：因为已经学过c++了所以就都用c++写了。
-header-img: /img/header_img/lml_bg.jpg
+header-img: /img/header_img/93794438_p0.jpg
 tags:
 - c++
 - PTA

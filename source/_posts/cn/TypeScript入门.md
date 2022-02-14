@@ -5,7 +5,7 @@ date: 2022-01-28 14:30:17
 subtitle: 这节课老师讲了TypeScript的用处与基本语法、高级类型的应用、类型保护与类型守卫
 sticky: 998
 lang: cn
-header-img: /img/header_img/lml_bg.jpg
+header-img: /img/header_img/92846013_p0.jpg
 tags:
 - 前端
 - TypeScript

@@ -31,20 +31,19 @@ permalink_defaults:
 ## Docs: https://www.jsdelivr.com/?docs=gh
 ## If Github Pages deploy，you can ues jsdelivr settings
 #
-jsdelivr:
-  jsdelivr_url: https://cdn.jsdelivr.net/gh/
-  github_username: yusixian
+# jsdelivr:
+#   jsdelivr_url: https://cdn.jsdelivr.net/gh/
+#   github_username: yusixian
 
 
 # Custom Setting Start
-
 # Site settings
 SEOTitle: cos的博客 - WA的一声就哭了
 email: cosine_yu@qq.com
 description: "一个正在努力学习前端的程序媛qwq"
 keyword: "前端, cos, blog, css, html, c++"
-header-img: img/header_img/newhome_bg.jpg
-archives-img: img/header_img/archive_bg2.jpg
+header-img: img/header_img/76445057_p0.jpg
+archives-img: img/header_img/94418447_p0.jpg
 
 
 # Favicon settings
