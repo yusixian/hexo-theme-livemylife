@@ -73,7 +73,7 @@ zhihu_username: qi-jiu-en
 # Sidebar Settings
 sidebar: true   # whether or not using Sidebar.
 sidebar-about-description: "诶嘿~~"
-sidebar-avatar: img/avatar/fatpeople.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: img/avatar/88865174_p0.jpg    # use absolute URL, seeing it's used in both `/` and `/about/`
 widgets:
 # - visitor   # busuanzi: https://busuanzi.ibruce.info/
 - recent-posts

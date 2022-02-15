@@ -1609,7 +1609,7 @@
     "resolve" "^1.10.0"
     "tildify" "^1.2.0"
 
-"hexo-cli@^4.0.0":
+"hexo-cli@^4.0.0", "hexo-cli@^4.3.0":
   "integrity" "sha512-lr46h1tK1RNQJAQZbzKYAWGsmqF5DLrW6xKEakqv/o9JqgdeempBjIm7HqjcZEUBpWij4EO65X6YJiDmT9LR7g=="
   "resolved" "https://registry.npmjs.org/hexo-cli/-/hexo-cli-4.3.0.tgz"
   "version" "4.3.0"
@@ -1922,7 +1922,7 @@
     "titlecase" "^1.1.2"
     "warehouse" "^2.2.0"
 
-"hexo@^5.4.0":
+"hexo@^5.4.1":
   "integrity" "sha512-20tyZB8TfaddneySZZ40mGFsN/V9nlolToUnA2KhRVl1wl6uWT10mnziVjLMhQfaYddqCwD36NvOamGS3DOLhQ=="
   "resolved" "https://registry.npmjs.org/hexo/-/hexo-5.4.1.tgz"
   "version" "5.4.1"
