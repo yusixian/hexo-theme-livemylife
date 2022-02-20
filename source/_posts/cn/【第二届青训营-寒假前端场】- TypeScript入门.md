@@ -87,7 +87,7 @@ bytedancer .plateform = 'data';
 /* 报错:缺少属性"name", 而hobby可缺省 */
 const bytedancer2: IBytedancer = {
     jobId: 89757,
-    sex: " woman ',
+    sex: "woman",
     age: 18,
 }
 ```

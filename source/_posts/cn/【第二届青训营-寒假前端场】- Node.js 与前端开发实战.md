@@ -150,36 +150,34 @@ categories:
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7baced8533a046adb95f1acd0a92bd87~tplv-k3u1fbpfcp-watermark.image?)
 
 - 改为JSON版
-
-  - ```js
-    const server = http.createServer((req, res) => {
-        // receive body from client
-        const bufs = [];    // 取传的数据
-        req.on('data', data => {
-            bufs.push(data);
-        });
-        req.on('end', () => {
-            const buf = Buffer.concat(bufs).toString('utf-8');
-            let msg = 'Hello';
-            try {
-                reqData = JSON.parse(buf);
-                msg = reqData.msg;
-            } catch (err) {
-                res.end('invalid json');
-            }
-            // response
-            const responseJson = {
-                msg: `receive：${msg}`
-            }
-            res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(responseJson));
-        });
-    });
-    ```
+```js
+  const server = http.createServer((req, res) => {
+      // receive body from client
+      const bufs = [];    // 取传的数据
+      req.on('data', data => {
+          bufs.push(data);
+      });
+      req.on('end', () => {
+          const buf = Buffer.concat(bufs).toString('utf-8');
+          let msg = 'Hello';
+          try {
+              reqData = JSON.parse(buf);
+              msg = reqData.msg;
+          } catch (err) {
+              res.end('invalid json');
+          }
+          // response
+          const responseJson = {
+              msg: `receive：${msg}`
+          }
+          res.setHeader('Content-Type', 'application/json');
+          res.end(JSON.stringify(responseJson));
+      });
+  });
+  ```
 
   - ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/25a3c3639d4947b290df7623d97a87bb~tplv-k3u1fbpfcp-watermark.image?)
-
-    ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a752766165644b1c8bf4e1493a482c6a~tplv-k3u1fbpfcp-watermark.image?)
+  - ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/a752766165644b1c8bf4e1493a482c6a~tplv-k3u1fbpfcp-watermark.image?)
 
 
 #### Http Client
