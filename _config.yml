@@ -42,7 +42,7 @@ SEOTitle: cos的博客 - WA的一声就哭了
 email: cosine_yu@qq.com
 description: "一个正在努力学习前端的程序媛qwq"
 keyword: "前端, cos, blog, css, html, c++"
-header-img: img/header_img/76445057_p0.jpg
+header-img: img/header_img/93604793_p0.jpg
 archives-img: img/header_img/94418447_p0.jpg
 
 
@@ -51,7 +51,7 @@ favicon: img/avatar/cos.jpg
 
 
 # Signature Setup
-signature: true # show signature
+signature: false # show signature
 signature-img: img/signature/mysignature.png
 
 
@@ -77,12 +77,11 @@ sidebar-avatar: img/avatar/88865174_p0.jpg    # use absolute URL, seeing it's us
 widgets:
 # - visitor   # busuanzi: https://busuanzi.ibruce.info/
 - recent-posts
+- short-about
 - archive
 - category
-- featured-tags
 - friends-blog
-- short-about
-
+- featured-tags
 
 # widget behavior
 ## Archive
@@ -98,17 +97,15 @@ friends: [
     {
         title: "大森的博客",
         href: "https://sadose.github.io/"
+    },
+    {
+        title: "小曹同学的百草园",
+        href: "https://www.xiaocao.cloud/"
+    },
+    {
+        title: "瘦虎的博客",
+        href: "https://gelxgx.github.io/blog/"
     }
-    # ,{
-    #     title: "Bean Tech",
-    #     href: "http://beantech.org"
-    # },{
-    #     title: "Hux Blog",
-    #     href: "http://huangxuan.me"
-    # },{
-    #     title: "Hexo",
-    #     href: "https://hexo.io/"
-    # }
 ]
 
 

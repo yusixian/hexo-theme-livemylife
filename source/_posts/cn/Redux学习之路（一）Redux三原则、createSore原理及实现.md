@@ -261,11 +261,15 @@ const store = createStore(counter);
 ```
 
 > [`createStore `](https://cn.redux.js.org/api/createstore) 创建一个 Redux [store](https://cn.redux.js.org/api/store) 来以存放应用中所有的 state。**应用中应有且仅有一个 store**。
-> #### 参数[#](https://cn.redux.js.org/api/createstore#参数)
+>
+> **参数**
+>
 > 1. **`reducer` *(Function)*:** 接收两个参数，分别是**当前的 state 树和要处理的 [action](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#action)**，**返回新的 [state 树](https://cn.redux.js.org/understanding/thinking-in-redux/glossary#state)。**
 > 2. **[`preloadedState`] *(any)*: 初始时的 state**。 在同构应用中，你可以决定是否把服务端传来的 state 水合（hydrate）后传给它，或者从之前保存的用户会话中恢复一个传给它。如果你使用 [`combineReducers`](https://cn.redux.js.org/api/combinereducers) 创建 `reducer`，它必须是一个普通对象，与传入的 keys 保持同样的结构。否则，你可以自由传入任何 `reducer` 可理解的内容。
 > 3. **`enhancer` *(Function)*: Store enhancer**，可选。可以用第三方第能力如中间价、时间旅行、持久化来增强 store。是一个组合 store creator 的高阶函数，返回一个新的强化过的 store creator。Redux 中唯一内置的 store enhander 是 [`applyMiddleware()`](https://cn.redux.js.org/api/applymiddleware)。
-> #### 返回值[#](https://cn.redux.js.org/api/createstore#返回值)
+>
+> **返回值**
+>
 > ([*`Store`*](https://cn.redux.js.org/api/store)): 保存了应用所有 state 的对象。改变 state 的惟一方法是 [dispatch](https://cn.redux.js.org/api/store#dispatchaction) action。你也可以 [subscribe 监听](https://cn.redux.js.org/api/store#subscribelistener) state 的变化，然后更新 UI。
 
 `createStore`所创建的`store`有3个重要方法

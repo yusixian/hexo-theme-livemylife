@@ -3,7 +3,7 @@ title: 【第二届青训营-寒假前端场】- 「TypeScript入门」笔记
 catalog: true
 date: 2022-01-28 14:30:17
 subtitle: 这节课老师讲了TypeScript的用处与基本语法、高级类型的应用、类型保护与类型守卫
-sticky: 998
+# sticky: 998
 lang: cn
 header-img: /img/header_img/92846013_p0.jpg
 tags:
