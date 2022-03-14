@@ -2,7 +2,7 @@
 title: 深入JavaScript学习之路（一）对象、类与面向对象编程
 catalog: true
 subtitle: 红宝书读书笔记 第八章 p205
-date: 2022-03-07 16:50:52
+date: 2022-03-13 16:50:52
 header-img: /img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg
 tags:
 - 前端
@@ -11,8 +11,7 @@ categories:
 - 前端
   - 学习笔记
 ---
-
-本章将学习：对象创建过程、原型链及继承实现方式、JS中的类等
+本章将学习：理解对象创建过程、原型链及继承
 <!-- more -->
 
 # 理解对象
@@ -405,3 +404,343 @@ this 对象可以把函数与对象的绑定**推迟到运行时**，所以可�
 - 原型对象默认只会获得 `constructor` 属性，其他的所有方法都继承自 `Object`
 - 每次调用构造函数创建一个新实例，其的内部`[[Prototype]]`指针就会被赋值为构造函数的原型对象
 - 脚本中没有访问这个 `[[Prototype]]` 特性的标准方式，但 Firefox、Safari 和 Chrome 会在每个对象上暴露 `__proto__` 属性，通过这个属性可以访问**对象的原型**
+
+正常的原型链都会终止于 Object 的原型对象，而 `Object` 原型的原型为 `null`
+```js
+console.log(Person.prototype.__proto__ === Object.prototype); // true 
+console.log(Person.prototype.__proto__.constructor === Object); // true 
+console.log(Person.prototype.__proto__.__proto__ === null); // true 
+```
+
+
+ **构造函数**、**原型对象**和**实例**是 3 个**完全不同**的对象：
+```js
+console.log(person1 !== Person); // true 
+console.log(person1 !== Person.prototype); // true 
+console.log(Person.prototype !== Person); // true
+```
+
+实例通过 `__proto__` 链接到原型对象，构造函数通过 `prototype` 属性链接到原型对象:
+```js
+console.log(person1.__proto__ === Person.prototype); // true 
+conosle.log(person1.__proto__.constructor === Person); // true 
+```
+同一个构造函数创建的实例**共享**同一个原型对象，而 `instanceof ` 检查实例的原型链中是否包含指定构造函数的原型：
+```js
+console.log(person1.__proto__ === person2.__proto__); // true 
+console.log(person1 instanceof Person); // true 
+console.log(person1 instanceof Object); // true 
+```
+- `isPrototypeOf()` 方法用于测试一个对象是否存在于另一个对象的原型链上。
+	- 与 ` instanceof` 运算符不同。在表达式 `object instanceof AFunction`中，`object` 的原型链是针对 `AFunction.prototype` 进行检查的，而不是针对 `AFunction` 本身。
+- `getPrototypeOf()`方法，返回参数的内部特性 `[[Prototype]]` 的值
+	- 使用它可以很方便的**取得一个对象的原型**，这在通过原型实现继承时尤为重要。
+- `setPrototypeOf()` 方法，可以向实例的私有特性 `[[Prototype]]` 写入一个新值。
+	- 使用它可以**重写一个对象的原型继承关系**
+```js
+console.log(Person.prototype.isPrototypeOf(person1)); // true 
+console.log(Person.prototype.isPrototypeOf(person2)); // true
+console.log(Object.getPrototypeOf(person1) == Person.prototype); // true 
+console.log(Object.getPrototypeOf(person1).name); // "cosine"
+```
+> `Object.setPrototypeOf()` 可能会严重影响代码性能。Mozilla 文档说得很清楚：“在所有浏览器和 JavaScript 引擎中，修改继承关系的影响都是微妙且深远的。这种影响并不仅是执行 `Object.setPrototypeOf()`语句那么简单，而是会**涉及所有**访问了那些修改了 `[[Prototype]]` 的对象的代码。
+
+为避免使用  `Object.setPrototypeOf()` 可能造成的性能下降，可以通过  `Object.create()` 来创建一个新对象，同时为其指定原型：
+```js
+let biped = { 
+ numLegs: 1
+}; 
+let person = Object.create(biped); 
+person.name = 'cosine'; 
+console.log(person.name); // cosine
+console.log(person.numLegs); // 1
+console.log(Object.getPrototypeOf(person) === biped); // true 
+```
+### 2、原型层级
+- 通过对象访问属性时，会按照该属性名称进行搜索。
+- 如果在这个实例上发现了这个属性，则返回该这个属性对应值。
+- 如果在该实例上没有找到，则会进入原型对象，在原型对象上找到属性后，返回对应的值。
+- 如果原型对象上没有找到，再到原型对象的原型对象上找……如此往复，直至找到
+- 这既是原型用于在多个对象实例间共享属性和方法的原理。
+
+注意以下几点：
+- 虽然可以通过实例读取原型对象上的值，但**不可能通过实例重写原型对象上的值**
+- 在实例上添加了一个与原型对象中同名的属性，则会在实例上创建这个属性，**这个属性会遮住原型对象上的属性**
+- 使用 `delete` 操作符可以**完全删除实例上的这个属性**，从而使标识符解析过程能够继续搜索原型对象
+#### hasOwnProperty()
+`hasOwnProperty()` 方法用于**确定**某个属性是在**实例上**还是在**原型对象**上。这个方法会在属性存在于调用它的对象**实例**上时返回 `true`
+```js
+function Person() {} 
+Person.prototype.name = "cosine"; 
+Person.prototype.age = 21; 
+Person.prototype.job = "Software Engineer"; 
+Person.prototype.sayName = function() { 
+	console.log(this.name); 
+}; 
+let person1 = new Person(); 
+let person2 = new Person(); 
+
+console.log(person1.hasOwnProperty("name")); // false 
+person1.name = "Khat"; 		// 添加了实例上的name， 遮蔽了原型上的name
+
+console.log(person1.name); // "Khat"，来自实例
+console.log(person1.hasOwnProperty("name")); // true 
+
+console.log(person2.name); // "cosine"，来自原型
+console.log(person2.hasOwnProperty("name")); // false 
+
+delete person1.name; 
+console.log(person1.name); // "cosine"，来自原型
+console.log(person1.hasOwnProperty("name")); // false
+```
+### 3、原型和in操作符
+`in` 操作符有以下两种使用方式：
+- 单独使用 `in` 操作符
+- 在 `for-in` 循环中使用
+
+单独使用时，通过对象访问指定属性时返回 `true`，**无论**该属性是在**实例**上还是在**原型**上
+```js 
+console.log(person1.hasOwnProperty("name")); // false 
+console.log("name" in person1); // true 
+
+person1.name = "cosine"; 
+console.log(person1.name); // "Khat"，来自实例
+console.log(person1.hasOwnProperty("name")); // true 
+console.log("name" in person1); // true 
+
+console.log(person2.name); // "cosine"，来自原型
+console.log(person2.hasOwnProperty("name")); // false 
+console.log("name" in person2); // true 
+
+delete person1.name; 
+console.log(person1.name); // "cosine"，来自原型
+console.log(person1.hasOwnProperty("name")); // false 
+console.log("name" in person1); // true 
+```
+
+如果要确定某个属性是否存在于原型上，则可以同时使用 `hasOwnProperty()` 和 `in ` 操作符
+```js
+function hasPrototypeProperty(object, name){ 
+	return !object.hasOwnProperty(name) && (name in object); 
+} ;
+```
+在 `for-in` 循环中使用 `in` 操作符时，**可以通过对象访问**且**可以被枚举的**属性都会返回，包括可枚举的**实例**属性、**原型**属性（不包括被遮蔽的原型属性和不可枚举的属性），除此之外，`Object.keys()` 方法也可以获得对象上所有可枚举的实例属性，其返回一个包括该对象所有可枚举属性名称的字符串数组
+
+若想获得所有**实例**属性（包括不可枚举），则可以用 `Object.getOwnPropertyNames()` 
+### 4、属性枚举顺序
+- 枚举顺序不确定
+	- `for-in` 循环
+	- `Object.keys()`
+	- 取决于 JavaScript 引擎，可能因浏览器而异。
+- 枚举顺序确定
+	- `Object.getOwnPropertyNames()`
+	- `Object.getOwnPropertySymbols()`
+	- `Object.assign()` 
+	- 先以 **升序** 枚举**数值键**，然后以 **插入顺序** 枚举**字符串和符号键**。
+
+## 对象迭代
+ECMAScript 2017 新增了两个静态方法，用于将对象内容转换为序列化的（可迭代的）格式。这两个静态方法 `Object.values()` 和 `Object.entries()` 接收一个对象，返回它们内容的数组。
+- `Object.values()` 返回对象值的数组
+- `Object.entries()` 返回键-值对的数组
+- 非字符串属性会被转换为字符串输出，符号属性则会被忽略。这两个方法执行的是对象的**浅复制**
+### 1、 其他原型语法
+为了减少代码冗余，从视觉上更好地封装原型功能，直接通过一个包含所有属性和方法的对象字面量来重写原型成为了一种常见的做法
+```js
+function Person() {} 
+Person.prototype = {
+	name: "cosine", 
+	age: 21, 
+	job: "Software Engineer", 
+	sayName() { 
+	console.log(this.name); 
+	} 
+}; 
+```
+但有一个问题：这样重写后，Person.prototype 的 constructor 属性就不指向 Person了。在创建函数时，也会创建它的 prototype 对象，同时会自动给这个原型的constructor 属性赋值。因此我们需要专门设置一下constructor的值
+
+```js
+Person.prototype = { 
+	constructor: Person, // 赋值
+	name: "cosine", 
+	age: 21, 
+	job: "Software Engineer", 
+	sayName() { 
+		console.log(this.name); 
+	} 
+}; 
+```
+以这种方式恢复 `constructor` 属性会创建一个`[[Enumerable]]` 为 `true` 的属性。而
+原生 `constructor` 属性默认是**不可枚举**的。因此，如果你使用的是兼容 ECMAScript 的 JavaScript 引擎，那可能需要改为使用 `Object.defineProperty()` 方法来定义 `constructor` 属性
+### 2、 原型的动态性
+因为从 **原型上搜索值** 的过程是**动态**的，所以即使**实例在修改原型之前已经存在**，任何时候对原型对象所做的修改也会在实例上反映出来：
+```js
+function Person() {} 
+let friend = new Person(); 
+Person.prototype = { 
+	constructor: Person, 
+	name: "cosine", 
+	age: 21, 
+	job: "Software Engineer", 
+	sayName() { 
+		console.log(this.name); 
+	} 
+}; 
+friend.sayName(); // 错误
+```
+### 3、 原生对象原型
+- 原型模式是实现所有**原生引用类型**的模式。
+- 所有原生引用类型的构造函数（包括 `Object`、`Array` 、 `String` 等）都在原型上定义了实例方法。
+	- 数组实例的 `sort()` 等方法就是 `Array.prototype` 上定义
+	- 字符串包装对象的 `substring()` 等方法也是在 `String.prototype` 上定义
+- 通过原生对象的原型可以取得所有默认方法的引用，也可以给原生类型的实例定义新的方法（但不建议这么做x）
+### 4、 原型的问题
+- 弱化了向构造函数传递初始化参数的能力，会导致所有实例默认都取得相同的属性值
+- 最主要问题源自它的共享特性，一般来说，不同的实例应该有属于自己的属性副本，而原型模式新增的属性会在不同实例上反映出来
+
+# 继承实现
+## 原型链
+- ECMA-262 将**原型链**定义为ECMAScript的 **主要继承方式**
+- 基本思想：通过原型，继承多个引用类型的属性与方法。
+
+回顾一下：每个构造函数有一个原型对象，通过 `prototype` 指向原型对象，原型dx有一个属性 `constructor` 指回构造函数，实例有一个内部指针 `__proto__` 指向原型。
+
+那如果原型是另一个类型的实例呢？那就意味着这个原型本身有一个内部指针 `__proto__` 指向另一个原型对象。相应地另一个原型也有另一个指针 `constructor` 指向另一个构造函
+数，这样就在实例和原型之间构造了一条**原型链**。
+
+原型链扩展了前面描述的原型搜索机制。我们知道，在读取实例上的属性时，首先会在实例上搜索这个属性。如果没找到，则会继承搜索实例的原型。在通过原型链实现继承之后，搜索就可以向上，搜索原型的原型。直至原型链的末端
+
+### 1、默认原型
+默认情况下，**所有引用类型都继承自 `Object`**，这也是通过原型链实现的。**任何函数的默认原型**都是一个 `Object` 的实例，这意味着这个实例有一个内部指针指向 `Object.prototype`。这也是为什么自定义类型能够继承包括 `toString()`、`valueOf()`在内的所有默认方法的原因。
+### 2、原型与继承关系
+原型与实例的关系可以通过两种方式来确定。
+- 使用 `instanceof `操作符，如果一个**实例的原型链中出现过相应的构造函数**，则 `instanceof` 返回 `true`
+```js
+console.log(instance instanceof Object); // true 
+console.log(instance instanceof SuperType); // true 
+console.log(instance instanceof SubType); // true
+```
+- 使用 `isPrototypeOf()` 方法。只要**该实例原型链中包含这个原型**，这个方法就返回 true
+```js
+console.log(Object.prototype.isPrototypeOf(instance)); // true 
+console.log(SuperType.prototype.isPrototypeOf(instance)); // true 
+console.log(SubType.prototype.isPrototypeOf(instance)); // true
+```
+### 3、原型链的问题
+- 在谈到原型的问题时也提到过，原型中包含的引用值会在所有实例间共享，这也是为什么属性通常会在构造函数中定义而不会定义在原型上的原因。
+- 在使用原型实现继承时，原型实际上变成了另一个类型的实例。这意味着**原先的实例属性**
+```js
+function SuperType() { 
+	this.colors = ["red", "blue", "green"]; 
+} 
+
+function SubType() {} 
+
+// 继承 SuperType 
+SubType.prototype = new SuperType(); 
+
+let instance1 = new SubType(); 
+instance1.colors.push("black"); 
+console.log(instance1.colors); // "red,blue,green,black" 
+
+let instance2 = new SubType(); 
+console.log(instance2.colors); // "red,blue,green,black" 
+```
+当 `SubType` 通过原型继承 `SuperType` 后，`SubType.prototype` 变成了 `SuperType` 的一个实例，因而也获得了自己的 `colors` 属性。这类似于创建了 SubType.prototype.colors 属性。最终结果是，`SubType`  的所有实例都会共享这个 `colors` 属性，`instance1.colors` 上的修改也会反映到 `instance2.colors上`
+
+- 第二个问题是，子类型在**实例化**时不能给父类型的**构造函数传参**。事实上，我们无法在不
+影响所有对象实例的情况下把参数传进父类的构造函数。再加上之前提到的原型中包含引用值的问题，就导致**原型链基本不会被单独使用**
+## 盗用构造函数
+基本思路：**在子类构造函数中调用父类构造函数。** 
+函数就是在特定上下文中执行代码的简单对象，所以可以使用 `apply()` 和 `call()` 方法以**新创建的对象**为上下文执行构造函数。
+```js
+function SuperType() { 
+	this.colors = ["red", "blue", "green"]; 
+} 
+function SubType() { 
+	// 继承 SuperType !!
+	SuperType.call(this); 
+} 
+let instance1 = new SubType(); 
+instance1.colors.push("black"); 
+console.log(instance1.colors); // "red,blue,green,black" 
+
+let instance2 = new SubType(); 
+console.log(instance2.colors); // "red,blue,green"
+```
+通过使用 `call()`（或 `apply()`）方法，`SuperType`构造函数在为 `SubType` 的实例创建的新对象的上下文中执行了。这相当于新的 `SubType` 对象上运行了 `SuperType()` 函数中的所有初始化代码！这样每个实例就有自己的属性了
+### 1、传递参数
+使用盗用构造函数可以在子类构造函数中向父类构造函数传参。
+```js
+function SuperType(name){ 
+	this.name = name; 
+} 
+function SubType() { 
+	// 继承 SuperType 并传参
+	SuperType.call(this, "cosine"); 
+	// 实例属性
+	this.age = 21; 
+} 
+let instance = new SubType(); 
+console.log(instance.name); // "cosine"; 
+console.log(instance.age); // 21
+```
+### 2、主要问题
+盗用构造函数的主要缺点，也是使用构造函数模式自定义类型的问题：
+- **必须在构造函数中定义方法**。因此函数**不能重用**
+- **子类不能访问父类原型上定义的方法**，因此所有类型**只能使用构造函数模式**
+
+由于存在这些问题，盗用构造函数基本上也不能单独使用。
+
+## 组合式继承
+组合继承综合了原型链和盗用构造函数，将两者的优点集中了起来。
+- 基本的思路是**使用原型链继承原型上的属性和方法**，而**通过盗用构造函数继承实例属性**
+- 既可以把方法定义在原型上以实现重用，又可以让每个实例都有自己的属性
+
+```js
+function SuperType(name){ 
+	this.name = name; 
+	this.colors = ["red", "blue", "green"]; 
+} 
+SuperType.prototype.sayName = function() { 
+	console.log(this.name); 
+}; 
+function SubType(name, age){ 
+	// 继承属性
+	SuperType.call(this, name); 
+	this.age = age; 
+} 
+// 继承方法
+SubType.prototype = new SuperType(); 
+SubType.prototype.sayAge = function() { 
+	console.log(this.age); 
+}; 
+let instance1 = new SubType("cosine", 21); 
+instance1.colors.push("black"); 
+console.log(instance1.colors); // "red,blue,green,black" 
+instance1.sayName(); // "cosine"; 
+instance1.sayAge(); // 21 
+let instance2 = new SubType("NaHCOx", 22); 
+console.log(instance2.colors); // "red,blue,green" 
+instance2.sayName(); // "NaHCOx"; 
+instance2.sayAge(); // 22
+```
+## 原型式继承
+
+适用情形：已有一个对象，想在它的基础上再创建一个新对象。你需要把这个对象先传给 object()，然后再对返回的对象进行适当修改。
+```js
+let person = { 
+	name: "Nicholas", 
+	friends: ["Shelby", "Court", "Van"] 
+}; 
+let anotherPerson = Object.create(person, { 
+	name: { 
+		value: "Greg" 
+	} 
+}); 
+console.log(anotherPerson.name); // "Greg"
+```
+
+非常适合以下几种情形：
+- **不需要单独创建构造函数**
+-  并且**需要**在对象间**共享信息**的场合
+- 注意：**属性中包含的引用值始终会在相关对象间共享**
