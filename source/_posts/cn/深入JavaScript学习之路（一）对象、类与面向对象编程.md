@@ -2,7 +2,7 @@
 title: 深入JavaScript学习之路（一）对象、类与面向对象编程
 catalog: true
 subtitle: 红宝书读书笔记 第八章 p205
-date: 2022-03-13 16:50:52
+date: 2022-03-14 16:50:52
 header-img: /img/header_img/galaxy-ngc-3190-wallpaper-for-2880x1800-60-653.jpg
 tags:
 - 前端
@@ -13,7 +13,6 @@ categories:
 ---
 本章将学习：理解对象创建过程、原型链及继承
 <!-- more -->
-
 # 理解对象
 > ECMA-262将对象定义为**一组属性的无序集合**，每个属性或方法都有一个名称来表示，可将其想象为一张**散列表**，值可以为数据/函数
 - 例1
@@ -744,3 +743,85 @@ console.log(anotherPerson.name); // "Greg"
 - **不需要单独创建构造函数**
 -  并且**需要**在对象间**共享信息**的场合
 - 注意：**属性中包含的引用值始终会在相关对象间共享**
+## 寄生式继承
+与原型式继承比较接近的一种继承方式是寄生式继承（parasitic inheritance）
+创建一个实现继承的函数，以某种方式增强对象，然后返回这个对象。
+基本的寄生继承模式如下
+```js
+function createAnother(original) {
+	let clone = Object.create(original);   // 调用构造函数创建一个新对象
+	clone.sayHi = function() {
+        console.log(`Hi! I am ${this.name}`);
+    };
+    return clone;   // 返回这个对象
+}
+let person = {
+    name: "cosine",
+    friends: ['NaHCOx', 'Khat']
+};
+let person2 = createAnother(person);
+person2.name = 'CHxCOOH';
+person2.sayHi();    // Hi! I am CHxCOOH
+```
+该例子通过person为源对象，返回一个增加了sayHi函数的新对象（进行了**增强**），主要适用于**关注对象**而**不在乎构造函数和类型**的场景
+
+需要注意的一点是：
+- 通过寄生式继承给对象添加函数会导致函数**难以重用**，与构造函数模式类似
+## 寄生式组合继承
+组合继承也有效率问题，比如父类构造函数始终会被调用两次
+
+- 在创建子类原型时调用
+- 在子类构造函数中调用
+
+```js
+function SuperType(name){ 
+	this.name = name; 
+	this.colors = ["red", "blue", "green"]; 
+} 
+SuperType.prototype.sayName = function() { 
+	console.log(this.name); 
+}; 
+function SubType(name, age){ 
+	// 继承属性
+	SuperType.call(this, name); // 第二次调用父类构造函数！
+	this.age = age; 
+} 
+// 继承方法
+SubType.prototype = new SuperType(); // 第一次调用父类构造函数！
+SubType.prototype.sayAge = function() { 
+	console.log(this.age); 
+}; 
+```
+
+本质上，子类的原型最终是要包含父类对象的所有实例属性，所以子类构造函数只需要在执行时 **重写** 自己的原型就可以了。
+
+寄生式组合继承主要思路如下：
+- 通过 **盗用构造函数** 继承**属性**
+- 使用 **混合式原型链** 继承**方法**
+也就是说，将父类原型拿来，并用指向子类的constructor遮蔽原有constructor,
+```js
+function inheritPrototype(subType, superType) {
+    let prototype = Object.create(superType.prototype); // 创建父类原型的一个副本
+    prototype.constructor = subType;    // 找回重写原型导致丢失的constructor
+    subType.prototype = prototype;      // 赋值对象
+}
+function SuperType(name){ 
+	this.name = name; 
+	this.colors = ["red", "blue", "green"]; 
+} 
+SuperType.prototype.sayName = function() { 
+	console.log(this.name); 
+}; 
+function SubType(name, age){ 
+	// 继承属性
+	SuperType.call(this, name); // 第二次调用父类构造函数！
+	this.age = age; 
+} 
+// 继承方法
+- SubType.prototype = new SuperType(); // 第一次调用父类构造函数！
++ inheritPrototype(SubType, SuperType);	// 变成调用这个函数
+SubType.prototype.sayAge = function() { 
+	console.log(this.age); 
+}; 
+```
+避免了不必要的多次调用父类构造函数，也保证了原型链不变，可以算是引用类型继承的最佳模式~
