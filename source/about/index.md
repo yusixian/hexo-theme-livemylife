@@ -7,19 +7,16 @@ description: "关于我？"
 header-img: "img/header_img/96080487_p0.jpg"
 ---
 
-# 有关信息？
-地址：HAUT河南工业大学
 
-qq：3450414733
-
-原神uid：100669015 欢迎来玩哦
 # 搭建博客的原因
 - 自大二开始，就有用博客记录学习成长的想法，一开始只是单纯的在CSDN上发一些数据结构练习，学习等博客，后来涉猎的知识也开始多了起来，主要还是以笔记为主23333也方便自己的复习
 - 尝试用了gitpage + hexo搭建这个博客，行！而且这个博客可以在github上实时同步
     - 搭建步骤参考此博客：[Hexo + GitPage 搭建个人博客](https://www.jianshu.com/p/d9dff0bf5da5)
     - 主要是习惯用md语法了，wordpress功能太多不适合，而且hexo也能自己定制主题练练手~
     - 关于我真的真的是个菜鸡这件事qwq
+
 # 现在正在进行的是？
+- 2022/3/20 找暑期实习真难哇！！也有在刷题惹
 - 2022/3/1 百度进阶班项目临近结束，准备冲刺春招暑期实习~
 - 2022/2/9 于是乎，今天搭了这个博客（经常忘记要干啥x）
 - 2022/1/17 大作业还不容易23333不过做完还是很有成就感
@@ -34,33 +31,53 @@ c++天下第一！（？）
 
 # 前端学习成果汇总
 
-百度前端训练营作业：不用任何框架，原生实现：
-- homewok1-1 [Hello World (cosine.ren)](https://cosine.ren/html/homework-day1/html/hello.html)
-- homewok1-附加题 简历 [My Resume (cosine.ren)](https://cosine.ren/html/homework-day1/html/resume.html)
-- homework2-1 信件标记 [纽臂大学李雷来信 (cosine.ren)](https://cosine.ren/html/homework-day2/src/1_letter/letter.html)
-- homework2-2 加载小动画 [css加载动画 (cosine.ren)](https://cosine.ren/html/homework-day2/src/2_loading/loading.html)
-- homework2-3 flex实现垂直水平居中 [方块垂直水平居中 (cosine.ren)](https://cosine.ren/html/homework-day2/src/3_flex/flex.html)
-- homework2-4 定位实现垂直水平居中 [方块垂直水平居中-定位实现 (cosine.ren)](https://cosine.ren/html/homework-day2/src/4_position/position.html)
-- homework2-5 简单的响应式demo 响应式demo：[随屏幕大小变化方块的颜色 (cosine.ren)](https://cosine.ren/html/homework-day2/src/5_ResponseDemo/demo.html)
-- homework2-6 附加题 [布局练习 (cosine.ren)](https://cosine.ren/html/homework-day2/src/6_project/demo.html)
-- homwork3  1-4  文件树转html/字符串、深拷贝、数字时钟 [js练习 (cosine.ren)](https://cosine.ren/html/homework-day3/index.html)
-- homwork3  选做题 todolist [todolist(by cos) (cosine.ren)](https://cosine.ren/html/homework-day3/todolist.html)
-- homwork4  添加/上传表单数据  [HomeWork_Day4 (cosine.ren)](https://cosine.ren/html/homework-day4/index.html)
-- 结课作业 暂不要求手机端适配  [结课作业 (cosine.ren)](https://cosine.ren/html/class-ending-homework/index.html)
+## 百度前端训练营作业
+不用任何框架，原生实现：
+- homewok1-1 [Hello World](https://ysx.cosine.ren/project/homework-day1/html/hello.html)
+- homewok1-附加题 简历 [My Resume](https://ysx.cosine.ren/project/homework-day1/html/resume.html)
+- homework2-1 信件标记 [纽臂大学李雷来信](https://ysx.cosine.ren/project/homework-day2/src/1_letter/letter.html)
+- homework2-2 加载小动画 [css加载动画](https://ysx.cosine.ren/project/homework-day2/src/2_loading/loading.html)
+- homework2-3 flex实现垂直水平居中 [方块垂直水平居中](https://ysx.cosine.ren/project/homework-day2/src/3_flex/flex.html)
+- homework2-4 定位实现垂直水平居中 [方块垂直水平居中-定位实现](https://ysx.cosine.ren/project/homework-day2/src/4_position/position.html)
+- homework2-5 简单的响应式demo 响应式demo：[随屏幕大小变化方块的颜色](https://ysx.cosine.ren/project/homework-day2/src/5_ResponseDemo/demo.html)
+- homework2-6 附加题 [布局练习](https://ysx.cosine.ren/project/homework-day2/src/6_附加题/demo.html)
+- homwork3  1-4  文件树转html/字符串、深拷贝、数字时钟 [js练习](https://ysx.cosine.ren/project/homework-day3/index.html)
+- homwork3  选做题 todolist [todolist(by cos)](https://ysx.cosine.ren/project/homework-day3/todolist.html)
+- homwork4  添加/上传表单数据  [HomeWork_Day4](https://ysx.cosine.ren/project/homework-day4/index.html)
+- 结课作业 暂不要求手机端适配  [结课作业](https://ysx.cosine.ren/project/class-ending-homework/)
     - step1：完成静态页面的布局及样式开发
     - step2：实现报名区域、课程安排的筛选功能
     - step3：实现点击弹出年份选择面板，并增加弹出框和课程的渐进动画
     - step4：实现选择学校面板，左侧选中某个省市时，右侧的院校List会联动发生改变，只显示该省市下的院校。省市保证至少10个，至少有1个省市包含的院校超过20个。
     - step5：实现报名提交的验证与提示，报名成功后的重新报名选项！完成！
     - 实现组件封装，将Picker和Prompt封装为新的组件
-比较有意思的有：day3的todolist、结课作业
-## todolist
-## 结课作业
+    - github地址：[class-ending-homework](https://github.com/yusixian/class-ending-homework)
+比较有意思的有：布局练习、homework3的todolist、结课作业
+### 布局练习
+- 在线预览链接：https://ysx.cosine.ren/project/homework-day2/src/6_附加题/demo.html
+![布局练习](./index/布局练习.png)
+
+### todolist
+- 在线预览链接：https://ysx.cosine.ren/project/homework-day3/todolist.html
+![todolist](./index/todolist.png)
+
+## 仿antd日期选择器~
+- 对应组件为：[Ant Design DatePicker日期选择框](https://ant.design/components/date-picker-cn/)
+- 仓库链接：[组件地址](https://github.com/cosineLearn/cosine-ui)
+- 自己的CodePen在线预览链接：[DatePicker（by cos）](https://codepen.io/yusixian/pen/wvPLgWN)
+个人博客链接：[仿Antd组件之DatePicker组件实现（简易）](https://ysx.cosine.ren/cn/%E4%BB%BFAntd%E7%BB%84%E4%BB%B6%E4%B9%8BDatePicker%E7%BB%84%E4%BB%B6%E5%AE%9E%E7%8E%B0%EF%BC%88%E7%AE%80%E6%98%93%EF%BC%89/)
+
+- 也算是第一次用React写自己的小组件，封装性还不行，bug也还有不少，写的代码自己复盘的时候也很想吐槽2333
+- 不过也真的是个很有意思的事！比如点击日期选择器外关闭日期选择器这个功能就纠结了我好长时间qwq，但是写完真的很快乐！
+- 使用了React的来ref判断点击事件发生在组件内部还是外部~
+- 实现自己的组件是很cool的事！~虽然有时候也会感觉有点重复造轮子~
+- 在学习antd组件的实现同时也感受到了其实现的不少细节，望尘莫及ovo，以后有机会还会有优化哒，增加更多api和功能和自定义大小设置等。
 
 # class-ending-homework
 ## 已完成
 - 完成特点：尽量保证了和设计稿的基本一致性，加入了css动画实现筛选和选择框移入时的渐入效果，实现了当选择的学校所在省市靠后时，调整左侧区域的滚动高度。在用户层面改善体验。利用本地LocalStorage进行存储并封装了相应通用工具。年份可选择的范围，和界面是解耦，通过js中的常量自定义开始和结束年份。
-- 在线预览链接：https://cosine.ren/html/class-ending-homework/index.html
+- github地址：[class-ending-homework](https://github.com/yusixian/class-ending-homework)
+- 在线预览链接：https://ysx.cosine.ren/project/class-ending-homework/index.html
 - 完成了如下功能：
   - step1：完成静态页面的布局及样式开发
   - step2：实现报名区域、课程安排的筛选功能
@@ -97,13 +114,14 @@ prompt.promptError(errorMsg);
 - step3：实现点击弹出年份选择面板，并增加弹出框和课程的渐进动画
 - step4：实现选择学校面板，左侧选中某个省市时，右侧的院校List会联动发生改变，只显示该省市下的院校。省市保证了至少10个，至少有1个省市包含的院校超过20个。
 - step5：实现报名提交的邮箱的正则验证与提示，报名成功后的重新报名选项。
-- ![大作业演示](/index/大作业演示.gif)
+
+ ![大作业演示](./index/大作业演示.gif)
 
 ## 结课作业基础版
 
 通过使用HTML、CSS、JavaScript等技术，实现如设计稿中的示例，实现一个HTML页面
 
-![第一步效果图](/index/ife_2021_st_1.jpg)
+![第一步效果图](./index/ife_2021_st_1.jpg)
 
 第一步：按照 ife_2021_st_1.jpg 所示，完成静态页面的布局及样式开发，建议要求包含：
 
@@ -115,7 +133,7 @@ prompt.promptError(errorMsg);
 6. 最头部的菜单及按钮，请实现其鼠标移动其上，以及点击时的反馈样式，具体样式不做特殊要求，请自行设计。
 7. 请关注使用图片物料的体积优化，课程安排中的圆形图片，源文件请使用方形，圆形效果请使用CSS来实现
 
-![第二步效果图](/index/ife_2021_st_2.jpg)
+![第二步效果图](./index/ife_2021_st_2.jpg)
 第二步：按照 ife_2021_st_2.jpg 所示，完成对上一步作业的进一步升级，升级内容包括：
 
 1. 实现一个报名区域
@@ -145,7 +163,7 @@ prompt.promptError(errorMsg);
 
 2.6 【可选】可以根据实际情况，设计和实现切换课程选项时的一些动效效果
 
-![第三步效果图](/index/ife_2021_st_3.jpg)
+![第三步效果图](./index/ife_2021_st_3.jpg)
 
 第三步：按照 ife_2021_st_03.jpg所示，实现一个入学年份的可视选择，需求包括：
 1. 入学年份输入框改为一个非输入框的区域（我们暂时称之为选择结果区域），默认显示某一个年份，默认样式同上一步
@@ -158,7 +176,7 @@ prompt.promptError(errorMsg);
 6. 请注意类似圆角、阴影等细节样式，按照设计图中实现
 7. 【可选】酌情按体验实现面板出现和消失的动效
 
-![第四步效果图](/index/ife_2021_st_4.jpg)
+![第四步效果图](./index/ife_2021_st_4.jpg)
 
 第四步：按照 ife_2021_st_04.jpg所示，实现选择学校面板，需求包括：
 1. 学校输入框变成非输入框区域（同样称之为 选择结果区域），默认为一种让选择的友好提示，不做默认选项选择。默认样式同前几步该部分样式
@@ -172,9 +190,9 @@ prompt.promptError(errorMsg);
 8.【可选】酌情按体验实现面板出现和消失的动效
 9. 将第三步和第四步的弹层做一个组件的封装
 
-![第五步效果图](/index/ife_2021_st_5.jpg)
+![第五步效果图](./index/ife_2021_st_5.jpg)
 
-![第六步效果图](/index/demo/ife_2021_st_6.jpg)
+![第六步效果图](./index/demo/ife_2021_st_6.jpg)
 
 第五步：按照 ife_2021_st_05.jpg和06.jpg所示，实现报名提交的验证与提示
 1. 验证内容包含：是否选择学校，电子邮箱的正确性
