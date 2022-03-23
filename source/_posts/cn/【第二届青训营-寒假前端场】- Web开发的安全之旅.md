@@ -100,7 +100,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/337518efa2844250a0bcf70cfc76fd60~tplv-k3u1fbpfcp-watermark.image?)
 
-##### Cross-site request forgery（CSRF，跨站伪造请求）
+#### Cross-site request forgery（CSRF，跨站伪造请求）
 
 - 在用户不知情的前提下
 
@@ -114,7 +114,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 
   > CSRF通过伪装来自受信任用户的请求来利用受信任的网站。与[XSS](https://link.jianshu.com/?t=http://baike.baidu.com/view/50325.htm)攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比[XSS](https://link.jianshu.com/?t=http://baike.baidu.com/view/50325.htm)`更具危险性`。
 
-##### Injection（注入）
+#### Injection（注入）
 
 - SQL注入：通过SQL参数进行注入
 
@@ -142,7 +142,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 
   ![image.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/53c32ca224314a3394d709b9b08e3717~tplv-k3u1fbpfcp-watermark.image?)
 
-##### Denial of Service（DOS）攻击
+#### Denial of Service（DOS）攻击
 
 - 通过某种方式(构造特定请求)，导致服务器资源被显著消耗,
 
@@ -172,7 +172,7 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 
       ![image.png](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f866aa26f1a346e08b8f646137e0189b~tplv-k3u1fbpfcp-watermark.image?)
 
-##### 中间人攻击（传输层）
+#### 中间人攻击（传输层）
 
 - **明文传输**
 
@@ -366,4 +366,3 @@ xss攻击也分几大类：Store XSS、Reflected XSS、DOM-based XSS、Mutation-
 这节课老师图文并茂的讲解了Web安全相关的很多知识，非常有意思，包括Web攻击的种类、防御方式等
 
 > 本文引用的内容大部分来自刘宇晨老师的课、MDN、外部博客引用：[这一次，彻底理解XSS攻击](https://juejin.cn/post/6912030758404259854#heading-17)、[浅谈CSRF](https://www.jianshu.com/p/7f33f9c7997b)
->
