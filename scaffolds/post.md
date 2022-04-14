@@ -1,5 +1,6 @@
 ---
 title: {{ title }}
+link: {{ title }}
 subtitle:
 date: {{ date }}
 catalog: true
@@ -8,7 +9,7 @@ tags:
 - 前端
 - JavaScript
 categories:
-- 学习笔记
+- 笔记
 ---
 
 <!-- more -->

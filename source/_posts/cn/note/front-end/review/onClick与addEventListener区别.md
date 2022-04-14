@@ -1,5 +1,6 @@
 ---
 title: 前端面试之onclick与addEventListener区别详述
+link: onclick-and-addeventlistener-difference
 catalog: true
 subtitle: 今天面试官问了这么一个问题：onClick与addEventListener有哪些区别呢
 date: 2022-04-04 21:10:52

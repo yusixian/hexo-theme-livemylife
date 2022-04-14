@@ -1,5 +1,6 @@
 ---
 title: 剑指offer day3 字符串（简单）
+link: coding-train/leetcode/offer/day3
 catalog: true
 subtitle: 知识点：字符串，难度为简单、简单
 date: 2022-04-01 21:00:52
@@ -8,18 +9,17 @@ tags:
 - leetcode
 - 字符串
 categories:
-- 题目记录
+- 剑指offer
 ---
-
 day3题目：[剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)、[剑指 Offer 58 - II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/)
 
 知识点：字符串，难度为简单、简单
 
 学习计划链接：[「剑指 Offer」 - 学习计划](https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr)
 
-| 题目 | 知识点 | 难度 |
-| --- | --- | --- |
-| [剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/) | 字符串 | 简单 |
+| 题目                                                                                               | 知识点               | 难度 |
+| -------------------------------------------------------------------------------------------------- | -------------------- | ---- |
+| [剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)                     | 字符串               | 简单 |
 | [剑指 Offer 58 - II. 左旋转字符串](https://leetcode-cn.com/problems/zuo-xuan-zhuan-zi-fu-chuan-lcof/) | 数学、双指针、字符串 | 简单 |
 
 # [剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti-huan-kong-ge-lcof/)
@@ -27,6 +27,7 @@ day3题目：[剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti
 请实现一个函数，把字符串 `s` 中的每个空格替换成"%20"。
 
 **示例 1：**
+
 ```
 输入： s = "We are happy."
 输出： "We%20are%20happy."
@@ -37,9 +38,11 @@ day3题目：[剑指 Offer 05. 替换空格](https://leetcode-cn.com/problems/ti
 `0 <= s 的长度 <= 10000`
 
 ## 思路及代码
+
 一行代码题
 
 js直接正则替换，或者遍历替换
+
 ```javascript
 var replaceSpace = function(s) {
     return s.replace(/ /g, '%20');
@@ -66,12 +69,14 @@ var replaceSpace = function(s) {
 
 **限制：**
 
--   `1 <= k < s.length <= 10000`
+- `1 <= k < s.length <= 10000`
 
 ## 思路及代码
+
 同样一行代码题。
 
 前n个字符转移到最后接上，就好了，也可以双指针（但没必要）
+
 ```javascript
 /**
  * @param {string} s

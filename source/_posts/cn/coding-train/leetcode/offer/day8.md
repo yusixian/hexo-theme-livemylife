@@ -1,5 +1,6 @@
 ---
 title: 剑指offer day8 动态规划（简单）
+link: coding-train/leetcode/offer/day8
 catalog: true
 subtitle: 知识点：数组、记忆化搜索、动态规划 ，难度为简单、简单、中等
 date: 2022-04-06 18:09:00
@@ -10,7 +11,7 @@ tags:
 - 记忆化搜索
 - 动态规划
 categories:
-- 题目记录
+- 剑指offer
 ---
 day8题目：[剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/)、[剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)、[剑指 Offer 63. 股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)
 
@@ -18,11 +19,11 @@ day8题目：[剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/pr
 
 学习计划链接：[「剑指 Offer」 - 学习计划](https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr)
 
-| 题目 | 知识点 | 难度 |
-| --- | --- | --- |
-| [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/) | [记忆化搜索](https://leetcode-cn.com/tag/memoization)、[数学](https://leetcode-cn.com/tag/math)、[动态规划](https://leetcode-cn.com/tag/dynamic-programming)| 简单 |
+| 题目                                                                                                 | 知识点                                                                                                                                              | 难度 |
+| ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ---- |
+| [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/)           | [记忆化搜索](https://leetcode-cn.com/tag/memoization)、[数学](https://leetcode-cn.com/tag/math)、[动态规划](https://leetcode-cn.com/tag/dynamic-programming) | 简单 |
 | [剑指 Offer 10- II. 青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/) | [记忆化搜索](https://leetcode-cn.com/tag/memoization)、[数学](https://leetcode-cn.com/tag/math)、[动态规划](https://leetcode-cn.com/tag/dynamic-programming) | 简单 |
-| [剑指 Offer 63. 股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/) | [数组](https://leetcode-cn.com/tag/array)、[动态规划](https://leetcode-cn.com/tag/dynamic-programming) | 中等 |
+| [剑指 Offer 63. 股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)        | [数组](https://leetcode-cn.com/tag/array)、[动态规划](https://leetcode-cn.com/tag/dynamic-programming)                                                    | 中等 |
 
 # [剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/problems/fei-bo-na-qi-shu-lie-lcof/)
 
@@ -32,6 +33,7 @@ day8题目：[剑指 Offer 10- I. 斐波那契数列](https://leetcode-cn.com/pr
 F(0) = 0,   F(1) = 1
 F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 ```
+
 斐波那契数列由 0 和 1 开始，之后的斐波那契数就是由之前的两数相加而得出。
 
 答案需要取模 1e9+7（1000000007），如计算初始结果为：1000000008，请返回 1。
@@ -52,11 +54,13 @@ F(N) = F(N - 1) + F(N - 2), 其中 N > 1.
 
 **提示：**
 
--   `0 <= n <= 100`
+- `0 <= n <= 100`
 
 ## 思路及代码
+
 本题标签都打了
 思路一：递归+记忆化搜索，记得取模
+
 ```javascript
 /**
  * @param {number} n
@@ -72,7 +76,9 @@ var fib = function(n) {
     return fibna(n)
 };
 ```
+
 思路二：迭代版，滚动数组优化，由于之受前两项影响，故每次只将前两项存储下来就好了
+
 ```javascript
 /**
  * @param {number} n
@@ -119,13 +125,13 @@ var fib = function(n) {
 
 **提示：**
 
--   `0 <= n <= 100`
+- `0 <= n <= 100`
 
-注意：本题与主站 70 题相同：<https://leetcode-cn.com/problems/climbing-stairs/>
+注意：本题与主站 70 题相同：[https://leetcode-cn.com/problems/climbing-stairs/](https://leetcode-cn.com/problems/climbing-stairs/)
 
 ## 思路及代码
 
-动态规划，设 `dp` 为第i台阶有多少种跳法，由于每次可以跳一层或二层，则 `dp[i] = dp[i-1]+dp[i-2]`（从 `i-1` 跳一层，从`i-2` 跳两层）。其实就是上题斐波那契数列，只不过第一项由0变为1罢了。
+动态规划，设 `dp` 为第i台阶有多少种跳法，由于每次可以跳一层或二层，则 `dp[i] = dp[i-1]+dp[i-2]`（从 `i-1` 跳一层，从 `i-2` 跳两层）。其实就是上题斐波那契数列，只不过第一项由0变为1罢了。
 
 ```javascript
 /**
@@ -143,7 +149,6 @@ var numWays = function(n) {
     return q
 };
 ```
-
 
 # [剑指 Offer 63. 股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)
 
@@ -170,14 +175,17 @@ var numWays = function(n) {
 
 `0 <= 数组长度 <= 10^5`
 
-**注意：** 本题与主站 121 题相同：<https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/>
+**注意：** 本题与主站 121 题相同：[https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/)
+
 ## 思路及代码
+
 之前day14里有做过哦：[冲刺春招-精选笔面试66题大通关day14](https://ysx.cosine.ren/cn/coding-train/leetcode/bytedance/bytedance-day14/)
 
 本质上就是最小值与最大值的一个差使其最大化，且最大值必须在最小值之后出现
+
 - 用 `min` 记录当前最小值，`ans` 记录最大利润
-    - 若当前 `price[i] <= min`，则更新 `min`
-    - 否则，记录最大利润，`ans = max(ans, prices[i]-min)`
+  - 若当前 `price[i] <= min`，则更新 `min`
+  - 否则，记录最大利润，`ans = max(ans, prices[i]-min)`
 
 ```javascript
 /**

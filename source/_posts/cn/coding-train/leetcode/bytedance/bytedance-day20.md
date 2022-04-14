@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day20
+link: coding-train/leetcode/bytedance/bytedance-day20
 catalog: true
 subtitle: 今日知识点：数组、二分、模拟，难度为简单、中等、字节の简单
 date: 2022-03-27 21:10:55

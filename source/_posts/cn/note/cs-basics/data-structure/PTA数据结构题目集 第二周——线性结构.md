@@ -1,5 +1,6 @@
 ---
 title: PTA数据结构题目集 第二周——线性结构
+link: PTA数据结构题目集 第二周——线性结构
 catalog: true
 lang: cn
 date: 2020-08-08 19:24:56 

@@ -1,5 +1,6 @@
 ---
 title: 深入JavaScript学习之路（二）JavaScript中的类
+link: js-learning-2
 catalog: true
 subtitle: 红宝书读书笔记 第八章 p205
 date: 2022-03-17 23:50:52

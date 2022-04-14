@@ -1,5 +1,6 @@
 ---
 title: 剑指offer day2 链表（简单）
+link: coding-train/leetcode/offer/day2
 catalog: true
 subtitle: 知识点：链表、递归、哈希，难度为简单、中等、中等
 date: 2022-03-31 21:00:52
@@ -10,20 +11,19 @@ tags:
 - 递归
 - 哈希
 categories:
-- 题目记录
+- 剑指offer
 ---
-
 day2题目：[剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)、[剑指 Offer 24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)、[剑指 Offer 35. 复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)
 
 知识点：链表、递归、哈希，难度为简单、中等、中等
 
 学习计划链接：[「剑指 Offer」 - 学习计划](https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr)
 
-| 题目 | 知识点 | 难度 |
-| --- | --- | --- |
+| 题目                                                                                                     | 知识点         | 难度 |
+| -------------------------------------------------------------------------------------------------------- | -------------- | ---- |
 | [剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/) | 栈、递归、链表 | 简单 |
-| [剑指 Offer 24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/) | 递归、链表 | 中等 |
-| [剑指 Offer 35. 复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/) | 哈希表、链表 | 中等 |
+| [剑指 Offer 24. 反转链表](https://leetcode-cn.com/problems/fan-zhuan-lian-biao-lcof/)                       | 递归、链表     | 中等 |
+| [剑指 Offer 35. 复杂链表的复制](https://leetcode-cn.com/problems/fu-za-lian-biao-de-fu-zhi-lcof/)           | 哈希表、链表   | 中等 |
 
 # [剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com/problems/cong-wei-dao-tou-da-yin-lian-biao-lcof/)
 
@@ -39,8 +39,11 @@ day2题目：[剑指 Offer 06. 从尾到头打印链表](https://leetcode-cn.com
 **限制：**
 
 `0 <= 链表长度 <= 10000`
+
 ## 思路及代码
+
 反过来输出，那就用栈，后进先出。
+
 ```javascript
 /**
  * @param {ListNode} head
@@ -71,10 +74,12 @@ var reversePrint = function(head) {
 
 `0 <= 节点个数 <= 5000`
 
-**注意**：本题与主站 206 题相同：<https://leetcode-cn.com/problems/reverse-linked-list/>
+**注意**：本题与主站 206 题相同：[https://leetcode-cn.com/problems/reverse-linked-list/](https://leetcode-cn.com/problems/reverse-linked-list/)
 
 ## 思路及代码
+
 老题目了，第三次做，在遍历链表时，将当前节点的 `nowp` 指针改为指向前一个节点 `prev`，最后返回新的链表头 `prep`。
+
 ```javascript
 /**
  * @param {ListNode} head
@@ -117,7 +122,6 @@ var reverseList = function(head) {
 
 **示例 3：**
 
-**![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/810036c073f5404a89ee1f3331fc1312~tplv-k3u1fbpfcp-zoom-1.image)**
 
 ```
 输入： head = [[3,null],[3,0],[3,null]]
@@ -134,16 +138,18 @@ var reverseList = function(head) {
 
 **提示：**
 
--   `-10000 <= Node.val <= 10000`
--   `Node.random` 为空（null）或指向链表中的节点。
--   节点数目不超过 1000 。
+- `-10000 <= Node.val <= 10000`
+- `Node.random` 为空（null）或指向链表中的节点。
+- 节点数目不超过 1000 。
 
-**注意：** 本题与主站 138 题相同：<https://leetcode-cn.com/problems/copy-list-with-random-pointer/>
-
+**注意：** 本题与主站 138 题相同：[https://leetcode-cn.com/problems/copy-list-with-random-pointer/](https://leetcode-cn.com/problems/copy-list-with-random-pointer/)
 
 ## 思路及代码
+
 ### 1、利用map存储拷贝过的结点
+
 并且递归的进行拷贝，如果当前节点被拷贝过则直接返回拷贝后的节点指针
+
 ```javascript
 var m = new Map()
 /**
@@ -160,8 +166,11 @@ var copyRandomList = function(head) {
     return newv
 };
 ```
+
 ### 2、迭代，拆分节点
+
 这个是看题解发现的思路，将该链表中每一个节点拆分为两个相连的节点，对于任意一个原节点 `S`，其拷贝节点 `S′` 即为其后继节点，然后将新节点的random正确赋值，再将新链表的next正确赋值。
+
 ```javascript
 /**
  * @param {Node} head

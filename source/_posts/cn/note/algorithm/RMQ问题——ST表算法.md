@@ -1,5 +1,6 @@
 ---
 title: RMQ问题——ST表算法
+link: RMQ问题——ST表算法
 catalog: true
 lang: cn
 date: 2020-03-21 20:41:41
@@ -10,7 +11,7 @@ tags:
 - 数据结构
 - ST表
 categories:
-- 算法笔记
+- [笔记, 算法]
 ---
 
 ## ST表是什么

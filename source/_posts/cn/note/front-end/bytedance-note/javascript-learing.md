@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「跟着月影学 JavaScript」笔记
+link: note/front-end/bytedance-note/javascript-learing
 catalog: true
 date: 2022-01-17 14:30:17
 subtitle: 面向对象的设计、高阶函数（节流、防抖、批处理、可迭代化）

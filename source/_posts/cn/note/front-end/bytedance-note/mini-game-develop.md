@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「小游戏开发」笔记
+link: note/front-end/bytedance-note/mini-game-development
 catalog: true
 date: 2022-01-29 14:30:17
 subtitle: 本节课讲了前端游戏场景下的游戏开发与普通游戏开发的差异，并且介绍了一些游戏引擎，给出了游戏开发的技能树，在最后也简单介绍了利用Cocos Creator或PixiJS进行游戏开发的步骤。

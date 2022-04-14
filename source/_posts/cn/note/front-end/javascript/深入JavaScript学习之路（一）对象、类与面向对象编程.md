@@ -1,5 +1,6 @@
 ---
 title: 深入JavaScript学习之路（一）对象、类与面向对象编程
+link: js-learning-1
 catalog: true
 subtitle: 红宝书读书笔记 第八章 p205
 date: 2022-03-14 16:50:52

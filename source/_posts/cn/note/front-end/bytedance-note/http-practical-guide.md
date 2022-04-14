@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「HTTP实用指南」
+link: note/front-end/bytedance-note/http-utilization-guide
 catalog: true
 date: 2022-01-22 14:30:17
 subtitle: HTTP及其常见协议分析、报文结构、缓存策略分析，以及其具体的业务场景使用。 

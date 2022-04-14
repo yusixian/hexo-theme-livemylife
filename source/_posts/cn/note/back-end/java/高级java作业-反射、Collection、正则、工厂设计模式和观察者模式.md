@@ -1,5 +1,6 @@
 ---
 title: 高级java作业(反射、Collection、正则、工厂设计模式和观察者模式)
+link: 高级java作业(反射、Collection、正则、工厂设计模式和观察者模式)
 catalog: true
 lang: cn
 date: 2021-12-16 00:02:03

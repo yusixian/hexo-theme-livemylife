@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「前端动画实现」
+link: note/front-end/bytedance-note/animation-implement
 catalog: true
 date: 2022-01-21 14:30:17
 subtitle: 前端动画的基本原理、分类和如何实现前端动画JS函数封装

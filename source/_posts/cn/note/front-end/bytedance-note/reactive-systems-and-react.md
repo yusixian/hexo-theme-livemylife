@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「响应式系统与 React」
+link: note/front-end/bytedance-note/responsive-system-and-react
 catalog: true
 date: 2022-01-21 14:30:17
 subtitle: 本节课大致介绍了响应式编程、React及其原理，介绍了组件化、一些应用级框架

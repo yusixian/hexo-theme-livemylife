@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day1
+link: coding-train/leetcode/bytedance/bytedance-day1
 catalog: true
 subtitle: 知识点：链表；冲刺01简单，冲刺02中等，冲刺03困难；冲刺02容易在面试中遇见。
 date: 2022-03-08 18:00:52

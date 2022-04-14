@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「CSS布局」
+link: note/front-end/bytedance-note/css-learning-layout
 catalog: true
 date: 2022-01-16 14:30:17
 subtitle: 字节青训营笔记，也算是自己进行的布局学习的梳理吧，MDN上讲的很详细,所以大多附上了MDN上的链接。

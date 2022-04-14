@@ -1,5 +1,6 @@
 ---
 title: 图论——解决最小生成树问题(Kruskal算法&Prim算法)
+link: 图论——解决最小生成树问题(Kruskal算法&Prim算法)
 catalog: true
 lang: cn
 date: 2020-04-22 16:07:46  

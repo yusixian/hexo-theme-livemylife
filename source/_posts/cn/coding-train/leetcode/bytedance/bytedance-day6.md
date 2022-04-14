@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day6
+link: coding-train/leetcode/bytedance/bytedance-day6
 catalog: true
 subtitle: 今日知识点：二分、模拟、01背包，难度为中等、中等、字节の简单
 date: 2022-03-13 23:40:22

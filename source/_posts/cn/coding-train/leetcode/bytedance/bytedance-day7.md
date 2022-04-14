@@ -1,5 +1,6 @@
 ---
-title: 冲刺春招-精选笔面试66题大通关
+title: 冲刺春招-精选笔面试66题大通关day7
+link: coding-train/leetcode/bytedance/bytedance-day7
 catalog: true
 subtitle: 今日知识点：数组、动态规划、哈希，难度为简单、中等、困难
 date: 2022-03-14 22:10:22

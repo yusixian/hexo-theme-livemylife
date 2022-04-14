@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day9
+link: coding-train/leetcode/bytedance/bytedance-day9
 catalog: true
 subtitle: 今日知识点：树、层序遍历、处理输入输出？（bushi），难度为中等、中等、字节の简单
 date: 2022-03-16 23:10:22

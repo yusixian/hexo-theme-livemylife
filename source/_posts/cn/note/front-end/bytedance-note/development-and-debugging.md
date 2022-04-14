@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「前端必须知道的开发调试知识」
+link: note/front-end/bytedance-note/development-and-debugging
 catalog: true
 date: 2022-01-20 14:30:17
 subtitle: Chorme devTools的调试使用、移动端调试等

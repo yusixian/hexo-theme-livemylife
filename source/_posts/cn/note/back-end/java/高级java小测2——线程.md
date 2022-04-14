@@ -1,5 +1,6 @@
 ---
 title: 高级java小测2——线程
+link: 高级java小测2——线程
 catalog: true
 lang: cn
 date: 2021-12-01 20:12:48

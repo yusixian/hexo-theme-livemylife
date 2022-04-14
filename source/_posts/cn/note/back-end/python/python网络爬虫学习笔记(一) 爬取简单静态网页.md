@@ -1,5 +1,6 @@
 ---
 title: python网络爬虫学习笔记(一) 爬取简单静态网页
+link: python网络爬虫学习笔记(一) 爬取简单静态网页
 catalog: true
 lang: cn
 date: 2021-02-03 15:53:01

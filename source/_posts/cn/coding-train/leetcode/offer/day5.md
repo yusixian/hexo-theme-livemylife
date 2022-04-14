@@ -1,5 +1,6 @@
 ---
 title: 剑指offer day5 查找算法（中等）
+link: coding-train/leetcode/offer/day5
 catalog: true
 subtitle: 知识点：数组、二分、哈希，难度为中等、简单、简单
 date: 2022-04-03 15:30:52
@@ -10,19 +11,18 @@ tags:
 - 哈希
 - 二分
 categories:
-- 题目记录
+- 剑指offer
 ---
-
 day5题目：[剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/)、[剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)、[剑指 Offer 50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 
 知识点：数组、二分、哈希，难度为中等、简单、简单
 
 学习计划链接：[「剑指 Offer」 - 学习计划](https://leetcode-cn.com/study-plan/lcof/?progress=7jn70jr)
 
-| 题目 | 知识点 | 难度 |
-| --- | --- | --- |
-| [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/) | 数组、二分 | 中等 |
-| [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/) | 数组、二分 | 简单 |
+| 题目                                                                                                              | 知识点       | 难度 |
+| ----------------------------------------------------------------------------------------------------------------- | ------------ | ---- |
+| [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/)            | 数组、二分   | 中等 |
+| [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)     | 数组、二分   | 简单 |
 | [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/) | 字符串、哈希 | 简单 |
 
 # [剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/)
@@ -53,10 +53,12 @@ day5题目：[剑指 Offer 04. 二维数组中的查找](https://leetcode-cn.com
 
 `0 <= m <= 1000`
 
-**注意：** 本题与主站 240 题相同：<https://leetcode-cn.com/problems/search-a-2d-matrix-ii/>
+**注意：** 本题与主站 240 题相同：[https://leetcode-cn.com/problems/search-a-2d-matrix-ii/](https://leetcode-cn.com/problems/search-a-2d-matrix-ii/)
 
 ## 思路及代码
+
 思路1：二分法+一些优化
+
 ```javascript
 /**
  * @param {number[][]} matrix
@@ -83,9 +85,11 @@ var findNumberIn2DArray = function(matrix, target) {
     return false;
 };
 ```
+
 思路2：站在数组右上角看这其实是一个二叉搜索树：[二维数组中的查找 - 力扣](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/solution/mian-shi-ti-04-er-wei-shu-zu-zhong-de-cha-zhao-zuo/)
 
 二叉搜索树中左边元素都比他小，右边元素都比他大，故这里若当前元素小于目标值则向右（实际是向下r++）找，大于目标值则向左（实际是向左c--）找。
+
 ```javascript
 var findNumberIn2DArray = function(matrix, target) {
     if(matrix.length == 0) return false;
@@ -99,6 +103,7 @@ var findNumberIn2DArray = function(matrix, target) {
     return false;
 };
 ```
+
 # [剑指 Offer 11. 旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 
 把一个数组最开始的若干个元素搬到数组的末尾，我们称之为数组的旋转。
@@ -123,19 +128,21 @@ var findNumberIn2DArray = function(matrix, target) {
 
 **提示：**
 
--   `n == numbers.length`
--   `1 <= n <= 5000`
--   `-5000 <= numbers[i] <= 5000`
--   `numbers` 原来是一个升序排序的数组，并进行了 `1` 至 `n` 次旋转
+- `n == numbers.length`
+- `1 <= n <= 5000`
+- `-5000 <= numbers[i] <= 5000`
+- `numbers` 原来是一个升序排序的数组，并进行了 `1` 至 `n` 次旋转
 
-注意：本题与主站 154 题相同：<https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/>
+注意：本题与主站 154 题相同：[https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/](https://leetcode-cn.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 
 ## 思路及代码
+
 在之前做过的 `33. 搜索旋转排序数组` 有讲过：[冲刺春招-精选笔面试 66 题大通关 day6](https://juejin.cn/post/7077502432942489607#heading-0)
 
 因为可能有重复的元素，故此题还需注意重复元素处的 `--r`
 
 这题的题解可以看官方的很详细：[旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-by-leetcode-s/)
+
 ```javascript
 var minArray = function(numbers) {
     if(numbers.length == 0) return 0;
@@ -149,6 +156,7 @@ var minArray = function(numbers) {
     return numbers[l];
 };
 ```
+
 # [剑指 Offer 50. 第一个只出现一次的字符](https://leetcode-cn.com/problems/di-yi-ge-zhi-chu-xian-yi-ci-de-zi-fu-lcof/)
 
 在字符串 s 中找出第一个只出现一次的字符。如果没有，返回一个单空格。 s 只包含小写字母。
@@ -166,6 +174,7 @@ var minArray = function(numbers) {
 输入：s = "" 
 输出：' '
 ```
+
 **限制：**
 
 `0 <= s 的长度 <= 50000`
@@ -173,6 +182,7 @@ var minArray = function(numbers) {
 ## 思路及代码
 
 遍历一遍用哈希表存，出现过两次以上的都按两次算。
+
 ```javascript
 var firstUniqChar = function(s) {
     let m = new Map();

@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day3
+link: coding-train/leetcode/bytedance/bytedance-day3
 catalog: true
 subtitle: 今日知识点：链表、二叉树，难度仍为简单、中等、困难（字节：重新定义简单）
 date: 2022-03-10 17:30:22

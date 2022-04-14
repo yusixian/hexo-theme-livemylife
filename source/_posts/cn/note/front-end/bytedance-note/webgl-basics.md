@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「WebGL基础」
+link: note/front-end/bytedance-note/webgl-basics
 catalog: true
 date: 2022-01-27 14:30:17
 subtitle: 这节课老师非常详尽的讲解了WebGL的绘图及其相关库，展示了很多有意思的WebGL小项目~

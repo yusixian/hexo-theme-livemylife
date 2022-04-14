@@ -1,5 +1,6 @@
 ---
 title: React学习小记
+link: react-learning-1
 catalog: true
 date: 2022-02-05 14:30:00
 subtitle: 一点点React学习的记录（真的只有一点点- -）

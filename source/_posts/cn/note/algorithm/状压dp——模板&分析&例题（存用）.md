@@ -1,5 +1,6 @@
 ---
 title: 状压dp——模板&分析&例题（存用）
+link: 状压dp——模板&分析&例题（存用）
 catalog: true
 lang: cn
 date:  2020-09-05 22:39:22 
@@ -9,7 +10,7 @@ tags:
 - c++
 - 算法
 categories:
-- 算法笔记
+- [笔记, 算法]
 ---
 
 状压讲解部分参考博客[状压DP详解（位运算）](https://www.cnblogs.com/smallhester/p/10394328.html)

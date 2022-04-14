@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day21
+link: coding-train/leetcode/bytedance/bytedance-day21
 catalog: true
 subtitle: 今日知识点：数组、排序、动态规划，难度为简单、中等、困难
 date: 2022-03-28 20:30:55

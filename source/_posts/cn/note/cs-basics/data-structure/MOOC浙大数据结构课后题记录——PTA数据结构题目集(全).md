@@ -1,5 +1,6 @@
 ---
 title: MOOC浙大数据结构课后题记录——PTA数据结构题目集(全)
+link: MOOC浙大数据结构课后题记录——PTA数据结构题目集(全)
 # sticky: 997
 catalog: true
 lang: cn

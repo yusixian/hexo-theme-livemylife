@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「前端设计模式应用」笔记
+link: note/front-end/bytedance-note/design-pattern
 catalog: true
 date: 2022-02-09 20:30:11
 subtitle: 浏览器和js中常用的设计模式，包括单例模式、观察者模式、原型模式、代理模式、迭代器模式等

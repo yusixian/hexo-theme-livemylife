@@ -1,5 +1,6 @@
 ---
 title: 【第二届青训营-寒假前端场】- 「Node.js 与前端开发实战」
+link: note/front-end/bytedance-note/nodejs-develop
 catalog: true
 date: 2022-01-24 14:30:17
 subtitle: 这节课从Node.js介绍起，实现了其编写Http Server的一个实战（并用Promise优化回调，还对SSR有了一定的了解），并在延伸话题里老师也给出了一些建议与拓展阅读，好欸~

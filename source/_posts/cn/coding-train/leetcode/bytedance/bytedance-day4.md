@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day4
+link: coding-train/leetcode/bytedance/bytedance-day4
 catalog: true
 subtitle: 今日知识点：数组、双指针、单调栈，难度仍为简单、中等、困难
 date: 2022-03-11 17:30:22

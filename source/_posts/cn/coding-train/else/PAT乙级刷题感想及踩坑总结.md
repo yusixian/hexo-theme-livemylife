@@ -1,5 +1,6 @@
 ---
 title: PAT乙级刷题感想及踩坑总结
+link: PAT乙级刷题感想及踩坑总结
 catalog: true
 lang: cn
 date: 2021-09-11 10:58:02 

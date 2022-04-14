@@ -1,5 +1,6 @@
 ---
 title: Redux学习之路（一）Redux三原则、createSore原理及实现
+link: redux-learning-1
 catalog: true
 lang: cn
 subtitle: Redux三原则、Reducer、getState、dispatch、subscribe原理及实现

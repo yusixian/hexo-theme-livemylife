@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day5
+link: coding-train/leetcode/bytedance/bytedance-day5
 catalog: true
 subtitle: 今日知识点：链表、数组、快排，难度为中等、中等、困难
 date: 2022-03-12 23:30:22

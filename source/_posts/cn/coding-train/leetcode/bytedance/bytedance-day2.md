@@ -1,5 +1,6 @@
 ---
 title: 冲刺春招-精选笔面试66题大通关day2
+link: coding-train/leetcode/bytedance/bytedance-day2
 catalog: true
 subtitle: 知识点：字符串、滑动窗口、二叉树，难度仍为简单、中等、困难。
 date: 2022-03-09 18:00:52
