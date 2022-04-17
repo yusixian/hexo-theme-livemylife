@@ -12,7 +12,6 @@ tags:
 categories:
 - 题目记录
 ---
-
 day5题目：[ 7. 整数反转](https://leetcode-cn.com/problems/reverse-integer/)、[215. 数组中的第K个最大元素](https://leetcode-cn.com/problems/kth-largest-element-in-an-array/)、[23. 合并K个升序链表](https://leetcode-cn.com/problems/merge-k-sorted-lists/)
 
 学习计划链接：[冲刺春招-精选笔面试 66 题大通关](https://leetcode-cn.com/study-plan/bytedancecampus/?progress=dcmyjb3)
@@ -21,7 +20,6 @@ day5题目：[ 7. 整数反转](https://leetcode-cn.com/problems/reverse-integer
 
 <!-- more -->
 
-
 # 7. 整数反转
 
 给你一个 32 位的有符号整数 x ，返回将 x 中的数字部分反转后的结果。
@@ -29,11 +27,13 @@ day5题目：[ 7. 整数反转](https://leetcode-cn.com/problems/reverse-integer
 如果反转后整数超过 32 位的有符号整数的范围 [−231,  231 − 1] ，就返回 0。
 
 假设环境不允许存储 64 位整数（有符号或无符号）。
+
 > 示例 1：
-输入：x = 123
-输出：321
+> 输入：x = 123
+> 输出：321
 
 ## 思路
+
 [整数反转-题解](https://leetcode-cn.com/problems/reverse-integer/solution/zheng-shu-fan-zhuan-by-leetcode-solution-bccn/)
 看了题解才晓得，是数学题嗷，通过不等式变换
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/ab6f52e151fa4b2981ff5a239430c580.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5L2ZY29z,size_20,color_FFFFFF,t_70,g_se,x_16)
@@ -41,6 +41,7 @@ day5题目：[ 7. 整数反转](https://leetcode-cn.com/problems/reverse-integer
 取巧一些的话就用long long存防止溢出
 
 ## 完整代码
+
 ```js
 class Solution {
 public:
@@ -55,25 +56,32 @@ public:
     }
 };
 ```
+
 # 215. 数组中的第K个最大元素
+
 给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。
 
 请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。
 
- 
+示例 1:
+输入: [3,2,1,5,6,4] 和 k = 2
+输出: 5
 
-> 示例 1:
-> 输入: [3,2,1,5,6,4] 和 k = 2
-> 输出: 5
 
-> 示例 2:
+
+示例 2:
 输入: [3,2,3,1,2,4,5,5,6] 和 k = 4
 输出: 4
+
 ## 思路
+
 取巧一点就直接调sort排好序之后返回。
 否则的话手写快排咯~~具体可以看排序那期的学习笔记：[数据结构学习笔记＜8＞ 排序](https://blog.csdn.net/qq_45890533/article/details/108246044)
+
 ## 完整代码
+
 暴力（时间反而很快
+
 ```cpp
 class Solution {
 public:
@@ -83,7 +91,9 @@ public:
     }
 };
 ```
+
 手写快排，主元在s~e中随机抽取以避免最坏情况。
+
 ```cpp
 class Solution {
 public:
@@ -109,28 +119,34 @@ public:
     }
 };
 ```
+
 # 23. 合并K个升序链表
+
 给你一个链表数组，每个链表都已经按升序排列。
 
 请你将所有链表合并到一个升序链表中，返回合并后的链表。
 
 > 示例 1：
-输入：lists = [[1,4,5],[1,3,4],[2,6]]
-输出：[1,1,2,3,4,4,5,6]
-解释：链表数组如下：
-[
-  1->4->5,
-  1->3->4,
-  2->6
-]
-将它们合并到一个有序链表中得到。
-1->1->2->3->4->4->5->6
+> 输入：lists = [[1,4,5],[1,3,4],[2,6]]
+> 输出：[1,1,2,3,4,4,5,6]
+> 解释：链表数组如下：
+> [
+> 1->4->5,
+> 1->3->4,
+> 2->6
+> ]
+> 将它们合并到一个有序链表中得到。
+> 1->1->2->3->4->4->5->6
 
 ## 思路
+
 day1就写过合并两个有序链表，这次的只需要暴力就好了。
 但要优化的话，可以使用优先队列每次链表头的结点，取出最顶上的结点放至答案链表后。
+
 ## 完整代码
+
 暴力版
+
 ```js
 /**
  * Definition for singly-linked list.
@@ -167,7 +183,9 @@ var mergeKLists = function(lists) {
     return ans;
 };
 ```
+
 优先队列版
+
 ```cpp
 /**
  * Definition for singly-linked list.
